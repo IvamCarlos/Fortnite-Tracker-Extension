@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="background">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active"  data-bs-toggle="tab" data-bs-target="#estatisticas" href="#estatisticas" type="button" role="tab" aria-controls="estatisticas-tab" aria-selected="true"><b>Estatísticas</b></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link"  data-bs-toggle="tab" data-bs-target="#power_ranking" href="#power_ranking" type="button" role="tab" aria-controls="power_ranking-tab" aria-selected="false"><b>Power Ranking</b></button>
+        </li>
+    </ul>
+
+    <div class="tab-content pt-5" id="myTabContent">
+        <div class="tab-pane fade show active" id="estatisticas" role="tabpanel" aria-labelledby="estatisticas-tab">
+            <!-- Estatísticas Conteúdo Tab-->
+            <form class="form-stats" method="POST">
+                <label class="label">Encontre suas estatísticas de Fortnite</label>
+                <input type="text" class="input" name="id" id="id" placeholder="Entre com seu Epic name...">
+                <select name="plataforma" id="plataforma">
+                    <option value="#">Selecione uma opção...</option>
+                    <option value="kbm">PC</option>
+                    <option value="gamepad">Console</option>
+                    <option value="touch">Celular</option>
+                </select>
+                <button class="button">Pesquisar</button>
+            </form>
+        </div>  
+
+        <div class="tab-pane fade" id="power_ranking" role="tabpanel" aria-labelledby="power_ranking-tab">
+            <!-- Power Ranking Conteúdo Tab-->
+            <form class="form-power-ranking" method="POST">
+                <label class="label">Power Ranking (PR)</label>
+                <input type="text" class="input" name="id_power_ranking" id="id_power_ranking" placeholder="Entre com seu Epic name...">
+                <select name="region" id="region">
+                    <option value="#">Selecione uma opção...</option>
+                    <option value="NAE">America do norte</option>
+                    <option value="NAW">America do sul</option>
+                    <option value="EU">Europa</option>
+                    <option value="BR">Brasil</option>
+                </select>
+                <select name="plataforma_power_ranking" id="plataforma_power_ranking">
+                    <option value="#">Selecione uma opção...</option>
+                    <option value="pc">PC</option>
+                    <option value="console">Console</option>
+                    <option value="mobile">Celular</option>
+                </select>
+                <button class="button">Pesquisar</button>
+            </form>
+        </div> 
+    </div>
+
+    <div id="result_stats"></div>
+    <div id="result_power_ranking"></div>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
